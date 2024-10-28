@@ -98,7 +98,7 @@ class Character(BaseModel, Avatar):
     description: str | None
     identifier: str
     avatar_file_name: str | None
-    songs: list
+    songs: list = None
     img_gen_enabled: bool
     base_img_prompt: str | None
     img_prompt_regex: str | None
@@ -109,8 +109,8 @@ class Character(BaseModel, Avatar):
     user__username: str
     participant__name: str
     participant__num_interactions: Optional[int] = None
-    participant__user__username: str
-    voice_id: str | None
+    participant__user__username: str = None
+    voice_id: str | None = None
     usage: Optional[str] = None
     upvotes: Optional[int] = None
 
